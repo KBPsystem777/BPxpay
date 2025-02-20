@@ -1,21 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from "react"
+import ReactDOM from "react-dom/client"
 
-import { Buffer } from "buffer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Buffer } from "buffer"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import { WagmiProvider } from "wagmi";
-import { OnchainKitProvider } from "@coinbase/onchainkit";
-import { base } from "wagmi/chains";
+import { WagmiProvider } from "wagmi"
+import { OnchainKitProvider } from "@coinbase/onchainkit"
+import { base } from "wagmi/chains"
 
-import App from "./App.tsx";
-import { config } from "./wagmi.ts";
+import { config } from "./wagmi.ts"
 
-import "./index.scss";
+import "./index.scss"
+import AppRouter from "./Router.tsx"
 
-globalThis.Buffer = Buffer;
+globalThis.Buffer = Buffer
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -25,9 +25,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
-          <App />
+          <AppRouter />
         </QueryClientProvider>
       </WagmiProvider>
     </OnchainKitProvider>
   </React.StrictMode>
-);
+)
