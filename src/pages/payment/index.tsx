@@ -17,7 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-import { Header } from "@/components/header"
+import DemoHeader from "@/components/header/DemoHeader"
 
 // Digital service plans
 const servicePlans = [
@@ -70,7 +70,7 @@ export default function PaymentPage() {
 
   return (
     <div className="min-h-screen bg-[url('/src/imgs/stream-bg.png')] bg-cover bg-center">
-      <Header />
+      <DemoHeader />
       <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-black bg-opacity-75">
         <Card className="w-full max-w-md bg-black bg-opacity-90 text-white border-gray-800">
           <CardHeader>

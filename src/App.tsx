@@ -1,11 +1,11 @@
 import "@coinbase/onchainkit/styles.css"
 
-import { BPxHomepage } from "./components/BPxHomepage"
+import Homepage from "./pages/Home"
 
 function App() {
   return (
     <div className="p-5">
-      <BPxHomepage />
+      <Homepage />
     </div>
   )
 }

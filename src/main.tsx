@@ -10,8 +10,9 @@ import { base } from "wagmi/chains"
 
 import { config } from "./wagmi.ts"
 
-import "./index.scss"
 import AppRouter from "./Router.tsx"
+
+import "./index.css"
 
 globalThis.Buffer = Buffer
 
