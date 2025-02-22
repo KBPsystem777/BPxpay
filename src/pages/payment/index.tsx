@@ -74,7 +74,7 @@ export default function PaymentPage() {
       <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-black bg-opacity-75">
         <Card className="w-full max-w-md bg-black bg-opacity-90 text-white border-gray-800">
           <CardHeader>
-            <CardTitle className="text-2xl">StreamFlix Subscription</CardTitle>
+            <CardTitle className="text-2xl">Netflix Subscription</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="mb-6">

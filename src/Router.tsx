@@ -8,7 +8,7 @@ const AppRouter = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/demo/payment" element={<PaymentPage />} />
+      <Route path="/demo" element={<PaymentPage />} />
       <Route path="/pay-with-sonic" element={<PayWithSonic />} />
     </Routes>
   </Router>
