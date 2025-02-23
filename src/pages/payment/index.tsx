@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -16,17 +18,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-
 import DemoHeader from "@/components/header/DemoHeader"
 
-// Digital service plans
-const servicePlans = [
-  { name: "Basic", price: 8.99 },
-  { name: "Standard", price: 13.99 },
-  { name: "Premium", price: 17.99 },
-]
+import { servicePlans } from "./constants/servicePlans.const"
 
 export default function PaymentPage() {
+  const navigate = useNavigate()
+
   const [selectedPlan, setSelectedPlan] = useState(servicePlans[1].name)
   const [selectedPayment, setSelectedPayment] = useState("sonic")
 
@@ -34,16 +32,7 @@ export default function PaymentPage() {
   const total = currentPlan ? currentPlan.price : 0
 
   const openPaymentWindow = () => {
-    const width = 400
-    const height = 600
-    const left = (window.screen.width - width) / 2
-    const top = (window.screen.height - height) / 2
-
-    window.open(
-      `/pay-with-sonic?amount=${total.toFixed(2)}&plan=${selectedPlan}`,
-      "Sonic Payment",
-      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
-    )
+    navigate(`/pay?amount=${total.toFixed(2)}&plan=${selectedPlan}`)
   }
 
   const connectMetamask = async () => {
@@ -59,7 +48,7 @@ export default function PaymentPage() {
 
   const handlePayment = () => {
     if (selectedPayment === "sonic") {
-      connectMetamask()
+      // connectMetamask()
       openPaymentWindow()
     } else {
       alert(
@@ -118,31 +107,21 @@ export default function PaymentPage() {
                     id="sonic"
                     className="border-white text-white data-[state=checked]:bg-white data-[state=checked]:text-white"
                   />
-                  <Label htmlFor="sonic">Pay with Sonic</Label>
+                  <Label htmlFor="sonic">Pay with Sonic via BPxPay</Label>
                 </div>
-                {/* <div className="flex items-center space-x-2">
-                  <RadioGroupItem
-                    value="credit"
-                    id="credit"
-                    className="border-white text-white data-[state=checked]:bg-white data-[state=checked]:text-white"
-                  />
-                  <Label htmlFor="credit">Credit Card</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem
-                    value="paypal"
-                    id="paypal"
-                    className="border-white text-white data-[state=checked]:bg-white data-[state=checked]:text-white"
-                  />
-                  <Label htmlFor="paypal">PayPal</Label>
-                </div> */}
               </RadioGroup>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex space-x-4">
+            <Button
+              onClick={() => navigate("/")}
+              className=" bg-gray hover:bg-gray-700"
+            >
+              Back to Home
+            </Button>
             <Button
               onClick={handlePayment}
-              className="w-full bg-red-600 hover:bg-red-700"
+              className="bg-red-600 hover:bg-red-700"
             >
               Subscribe Now
             </Button>
