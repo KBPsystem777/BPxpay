@@ -5,10 +5,11 @@ export default function Hero() {
     <section className="bg-web3-gradient py-20">
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-5xl font-bold mb-4 text-white">
-          Welcome to BPxpay
+          Empower Your Business with Seamless Crypto Transactions
         </h1>
         <p className="text-xl mb-8 text-gray-200">
-          The Stripe of Crypto - Revolutionizing Decentralized Payments
+          BPxPay is revolutionizing digital payments, offering a secure and
+          user-friendly platform to accept cryptocurrencies effortlessly.
         </p>
         <Link
           to="/demo"

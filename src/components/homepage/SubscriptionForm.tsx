@@ -4,7 +4,8 @@ export default function SubscriptionForm() {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-8 text-white">Stay Updated</h2>
         <p className="text-xl mb-8 text-gray-200">
-          Subscribe to our newsletter for the latest updates and features.
+          We're on the brink of launching something transformative. Subscribe
+          now to receive updates and be among the first to experience BPxPay.
         </p>
         <form
           className="max-w-md mx-auto"

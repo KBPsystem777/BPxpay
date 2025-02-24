@@ -5,32 +5,40 @@ export default function HowBpxPayWorks() {
         <h2 className="text-3xl font-bold mb-8 text-center text-gradient">
           How BPxpay Works
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="p-6 rounded-lg shadow-lg border border-purple-500">
             <h3 className="text-xl font-semibold mb-4 text-black">
               1. Integration
             </h3>
             <p className="text-black">
-              Easily integrate BPxpay into your website or app with our simple
-              API and SDKs.
+              Seamlessly incorporate BPxPay into your existing systems with
+              minimal effort.
             </p>
           </div>
           <div className="p-6 rounded-lg shadow-lg border border-purple-500">
             <h3 className="text-xl font-semibold mb-4 text-black">
-              2. Transaction
+              2. Multi-Currency Support
             </h3>
             <p className="text-black">
-              Customers choose their preferred cryptocurrency to make fast and
-              secure payments.
+              Accept a diverse range of cryptocurrencies to cater to a global
+              customer base.
             </p>
           </div>
           <div className="p-6 rounded-lg shadow-lg border border-purple-500">
             <h3 className="text-xl font-semibold mb-4 text-black">
-              3. Settlement
+              3. Real-Time Analytics
             </h3>
             <p className="text-black">
-              Receive funds in your preferred currency - crypto or fiat - with
-              low transaction fees.
+              Gain insights into your transactions with our intuitive dashboard.
+            </p>
+          </div>
+          <div className="p-6 rounded-lg shadow-lg border border-purple-500">
+            <h3 className="text-xl font-semibold mb-4 text-black">
+              4. Robust Security
+            </h3>
+            <p className="text-black">
+              Utilize advanced security protocols to protect your business and
+              customers.
             </p>
           </div>
         </div>

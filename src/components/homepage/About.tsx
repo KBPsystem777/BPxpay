@@ -12,9 +12,10 @@ export default function About() {
           BPxpay - The gateway for crypto payments.
         </p>
         <p className="text-lg mb-6 text-gray-200">
-          BPxpay is at the forefront of the decentralized finance revolution.
-          We're building the future of payments, enabling seamless transactions
-          with cryptocurrencies like Ethereum, Bitcoin, and stablecoins.
+          At BPxPay, we're developing a cutting-edge crypto payment gateway
+          designed to simplify digital transactions for businesses of all sizes.
+          Our platform will enable you to accept multiple cryptocurrencies with
+          ease, ensuring fast and secure payments.
         </p>
         <p className="text-lg mb-6 text-gray-200">
           Our mission is to make crypto payments as easy and accessible as
