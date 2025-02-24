@@ -7,7 +7,17 @@ export default function SubscriptionForm() {
           We're on the brink of launching something transformative. Subscribe
           now to receive updates and be among the first to experience BPxPay.
         </p>
-        <form
+        <div className="max-w-md mx-auto">
+          <button
+            onClick={() =>
+              window.open("https://form.typeform.com/to/mFLWZoiS", "_blank")
+            }
+            className="bg-purple-800 hover:bg-purple-900 px-6 py-2 rounded-lg font-bold text-white border-2 border-white"
+          >
+            Subscribe
+          </button>
+        </div>
+        {/* <form
           className="max-w-md mx-auto"
           action="/api/subscribe"
           method="POST"
@@ -27,7 +37,7 @@ export default function SubscriptionForm() {
               Subscribe
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </section>
   )
