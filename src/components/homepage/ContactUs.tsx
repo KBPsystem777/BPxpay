@@ -15,15 +15,6 @@ export default function ContactUs() {
             bpxailabs@gmail.com
           </a>
         </p>
-        <p className="text-lg mb-4 text-gray-200">
-          Twitter:{" "}
-          <a
-            href="https://twitter.com/KBPsystem"
-            className="text-white hover:underline font-bold"
-          >
-            @KBPsystem
-          </a>
-        </p>
       </div>
     </section>
   )
