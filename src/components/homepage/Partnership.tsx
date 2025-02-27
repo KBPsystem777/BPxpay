@@ -16,7 +16,7 @@ export default function Partnership() {
             href="mailto:bpxailabs@gmail.com"
             className="font-bold mb-8 text-center text-gradient"
           >
-            bpxailabs@gmail.com
+            bpxpay@gmail.com
           </a>
         </p>
         <p className="text-lg mb-8 text-black">Or book a meeting with us:</p>

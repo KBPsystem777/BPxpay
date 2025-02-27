@@ -12,7 +12,7 @@ export default function ContactUs() {
             href="mailto:bpxailabs@gmail.com"
             className="text-white hover:underline font-bold"
           >
-            bpxailabs@gmail.com
+            bpxpay@gmail.com
           </a>
         </p>
       </div>
