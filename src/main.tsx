@@ -10,7 +10,7 @@ import { base } from "wagmi/chains"
 
 import { config } from "./wagmi.ts"
 
-import AppRouter from "./Router.tsx"
+import App from "./App.tsx"
 
 import "./index.css"
 
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
-          <AppRouter />
+          <App />
         </QueryClientProvider>
       </WagmiProvider>
     </OnchainKitProvider>

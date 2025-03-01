@@ -3,7 +3,7 @@ export default function Footer() {
     return new Date().getFullYear()
   }
 
-  const footerText = `${getCurrentYear()} BPxpay. All rights reserved`
+  const footerText = `${getCurrentYear()} BPxPay. All rights reserved`
 
   return (
     <footer className="bg-white text-black py-6 border-t">
