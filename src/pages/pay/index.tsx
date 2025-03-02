@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react"
 import { ethers } from "ethers"
+import { useNavigate } from "react-router-dom"
 import { injected, useAccount, useConnect, useSwitchChain } from "wagmi"
+
+import jsPDF from "jspdf"
+
 import { stringToHex } from "viem"
 import { customBlazeNet } from "@/wagmi"
-import { useNavigate } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-import jsPDF from "jspdf"
+import { WalletConnect } from "@/components/wallets/WalletConnect"
+import { Coinbase } from "@/components/wallets/Coinbase"
+
 import { shortenHash } from "@/utils/shortenHash.utils"
 
 import sLogo from "@/imgs/s-logo.png"
@@ -135,6 +140,8 @@ export default function PayWithSonic() {
         >
           Connect Wallet
         </Button>
+        <Coinbase />
+        <WalletConnect />
       </div>
     )
   }
