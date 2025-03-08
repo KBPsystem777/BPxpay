@@ -4,15 +4,15 @@ import "@coinbase/onchainkit/styles.css"
 
 import { Toaster } from "./components/ui/sonner"
 
-import Homepage from "./pages/Home"
 import PaymentPage from "./pages/payment"
 import PayWithSonic from "./pages/pay"
+import NewHomePage from "./pages/Home/NewHomepage"
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<NewHomePage />} />
         <Route path="/demo" element={<PaymentPage />} />
         <Route path="/pay" element={<PayWithSonic />} />
       </Routes>
