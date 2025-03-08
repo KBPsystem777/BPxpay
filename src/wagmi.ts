@@ -1,6 +1,7 @@
 import { http, createConfig } from "wagmi"
-import { injected } from "wagmi/connectors"
 import { defineChain } from "viem"
+
+import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors"
 
 export const customBlazeNet = defineChain({
   id: 57054,
@@ -26,7 +27,10 @@ export const config = createConfig({
   chains: [customBlazeNet],
   connectors: [
     injected(),
-    // walletConnect({ projectId: import.meta.env.VITE_WC_PROJECT_ID }),
+    walletConnect({
+      projectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID,
+    }),
+    coinbaseWallet(),
   ],
   transports: {
     [customBlazeNet.id]: http(),
