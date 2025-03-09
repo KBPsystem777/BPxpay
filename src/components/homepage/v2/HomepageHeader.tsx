@@ -3,15 +3,12 @@ import { Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
+import { redirectToWaitlistForm } from "@/utils/redirectToWaitlistForm"
+
 import bpxPayLogo from "@/imgs/bpxpay-logo.png"
 
 export const HomepageHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const redirectToWaitlistForm = () => {
-    const formAddress = "https://bit.ly/bpx-waitlist"
-    window.open(formAddress, "_blank")
-  }
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -54,7 +51,10 @@ export const HomepageHeader = () => {
         </nav>
         <div className="hidden md:flex">
           <a href="#waitlist">
-            <Button className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800">
+            <Button
+              onClick={redirectToWaitlistForm}
+              className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800"
+            >
               Pre-Register Now
             </Button>
           </a>
@@ -106,11 +106,12 @@ export const HomepageHeader = () => {
               Contact
             </a>
             <div className="pt-2">
-              <a href="#waitlist">
-                <Button className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800">
-                  Pre-Register Now
-                </Button>
-              </a>
+              <Button
+                onClick={redirectToWaitlistForm}
+                className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800"
+              >
+                Pre-Register Now
+              </Button>
             </div>
           </nav>
         </div>

@@ -16,7 +16,7 @@ export const FAQ = () => {
             {
               question: "When will BPxPay be available?",
               answer:
-                "We're currently in private beta testing and plan to launch our public beta in Q3 2023. Join our waitlist to be among the first to get access.",
+                "We're currently in private beta testing and plan to launch our public beta in Q3 2025. Join our waitlist to be among the first to get access.",
             },
             {
               question: "How does BPxPay compare to GCash and PayMaya?",
@@ -28,15 +28,11 @@ export const FAQ = () => {
               answer:
                 "BPxPay will support all major payment methods in the Philippines including credit/debit cards, e-wallets (GCash, PayMaya, etc.), online banking, over-the-counter payments, and QR code payments.",
             },
-            {
-              question: "Is BPxPay secure and compliant with regulations?",
-              answer:
-                "Yes, security is our top priority. BPxPay is being built with PCI DSS compliance and follows all BSP regulations for payment processors in the Philippines.",
-            },
+
             {
               question: "Will there be any special offers for early adopters?",
               answer:
-                "Members of our waitlist will receive special perks including zero transaction fees for the first 3 months, priority support, and early access to new features.",
+                "Members of our waitlist will receive special perks including NFT and token airdrops, zero transaction fees for the first 3 months, priority support, and early access to new features.",
             },
           ].map((item, index) => (
             <div key={index} className="rounded-lg border bg-card p-6">

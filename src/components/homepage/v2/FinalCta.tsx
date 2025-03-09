@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button"
 
+import { redirectToWaitlistForm } from "@/utils/redirectToWaitlistForm"
+
 export const FinalCta = () => {
-  const redirectToWaitlistForm = () => {
-    const formAddress = "https://bit.ly/bpx-waitlist"
-    window.open(formAddress, "_blank")
-  }
   return (
     <section className="py-16 md:py-24">
       <div className="container text-center">
