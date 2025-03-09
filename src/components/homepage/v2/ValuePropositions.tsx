@@ -59,7 +59,7 @@ export const ValuePropositions = () => {
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">PCI DSS Level 1 compliance</span>
+                  <span className="text-sm">Secured by blockchain</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -67,7 +67,7 @@ export const ValuePropositions = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">BSP regulated and approved</span>
+                  <span className="text-sm">Verifiable transactions</span>
                 </li>
               </ul>
             </CardContent>

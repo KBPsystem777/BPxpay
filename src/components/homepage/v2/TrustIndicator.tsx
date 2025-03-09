@@ -7,7 +7,7 @@ export const TrustIndicator = () => {
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-16">
           <div className="flex items-center gap-2">
             <Shield className="h-6 w-6 text-primary" />
-            <span className="text-sm font-medium">PCI DSS Compliant</span>
+            <span className="text-sm font-medium">Blockchain secured</span>
           </div>
           <div className="flex items-center gap-2">
             <Lock className="h-6 w-6 text-primary" />
@@ -15,7 +15,7 @@ export const TrustIndicator = () => {
           </div>
           <div className="flex items-center gap-2">
             <Award className="h-6 w-6 text-primary" />
-            <span className="text-sm font-medium">BSP Regulated</span>
+            <span className="text-sm font-medium">Audited smart contracts</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="h-6 w-6 text-primary" />

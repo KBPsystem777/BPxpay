@@ -1,8 +1,14 @@
+import { PARTNERS_WEBSITE } from "@/components/constants/urls.const"
+
 import sonicLogo from "@/imgs/s-logo.png"
 import baseLogo from "@/imgs/base-logo.png"
 import victionLogo from "@/imgs/viction-logo.png"
 
 export const CurrentPartners = () => {
+  const redirectToPartner = (url: string) => {
+    window.open(url, "_blank")
+  }
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 via-white to-purple-50">
       <div className="container">
@@ -17,8 +23,26 @@ export const CurrentPartners = () => {
         </div>
 
         <div className="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
+          {/* Viction */}
+          <div
+            className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => redirectToPartner(PARTNERS_WEBSITE.VICTION)}
+          >
+            <div className="w-32 h-32 mb-6 flex items-center justify-center bg-gradient-to-br rounded-full p-4">
+              <img src={victionLogo} alt="Viction" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Viction</h3>
+            <p className="text-center text-muted-foreground">
+              Viction stands out by offering zero-gas transactions, high
+              scalability, and enhanced security.
+            </p>
+          </div>
+
           {/* Coinbase */}
-          <div className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow">
+          <div
+            className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => redirectToPartner(PARTNERS_WEBSITE.BASE)}
+          >
             <div className="w-32 h-32 mb-6 flex items-center justify-center bg-gradient-to-br rounded-full p-4">
               <img src={baseLogo} alt="Base" />
             </div>
@@ -30,20 +54,11 @@ export const CurrentPartners = () => {
             </p>
           </div>
 
-          {/* Viction */}
-          <div className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow">
-            <div className="w-32 h-32 mb-6 flex items-center justify-center bg-gradient-to-br rounded-full p-4">
-              <img src={victionLogo} alt="Viction" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Viction</h3>
-            <p className="text-center text-muted-foreground">
-              Viction stands out by offering zero-gas transactions, high
-              scalability, and enhanced security.
-            </p>
-          </div>
-
           {/* Sonic */}
-          <div className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow">
+          <div
+            className="flex flex-col items-center p-8 rounded-xl border bg-white shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => redirectToPartner(PARTNERS_WEBSITE.SONIC)}
+          >
             <div className="w-32 h-32 mb-6 flex items-center justify-center prim rounded-full p-4">
               <img src={sonicLogo} alt="Sonic" />
             </div>
