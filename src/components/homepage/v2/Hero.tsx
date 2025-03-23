@@ -1,9 +1,10 @@
-import { CheckCircle2, Zap, ChevronRight } from "lucide-react"
+import { CheckCircle2, Zap, ChevronRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
-import fakeDashboard from "@/imgs/bpx-fake-dashboard.png"
+import fakeDashboard from "@/imgs/bpx-fake-dashboard.png";
+import { WAITLIST_FORM } from "@/components/constants/urls.const";
 
 export const Hero = () => {
   return (
@@ -26,7 +27,7 @@ export const Hero = () => {
               next-generation payment solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#waitlist">
+              <a href={WAITLIST_FORM}>
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800"
@@ -66,5 +67,5 @@ export const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

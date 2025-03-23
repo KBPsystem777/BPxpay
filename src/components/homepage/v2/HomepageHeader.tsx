@@ -1,14 +1,15 @@
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
-import { redirectToWaitlistForm } from "@/utils/redirectToWaitlistForm"
+import { redirectToWaitlistForm } from "@/utils/redirectToWaitlistForm";
+import { WAITLIST_FORM } from "@/components/constants/urls.const";
 
-import bpxPayLogo from "@/imgs/bpxpay-logo.png"
+import bpxPayLogo from "@/imgs/bpxpay-logo.png";
 
 export const HomepageHeader = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,7 +38,7 @@ export const HomepageHeader = () => {
             Comparison
           </a>
           <a
-            href="#waitlist"
+            href={WAITLIST_FORM}
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Join Waitlist
@@ -50,7 +51,7 @@ export const HomepageHeader = () => {
           </a>
         </nav>
         <div className="hidden md:flex">
-          <a href="#waitlist">
+          <a href={WAITLIST_FORM}>
             <Button
               onClick={redirectToWaitlistForm}
               className="bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800"
@@ -92,7 +93,7 @@ export const HomepageHeader = () => {
               Comparison
             </a>
             <a
-              href="#waitlist"
+              href={WAITLIST_FORM}
               className="text-sm font-medium transition-colors hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -117,5 +118,5 @@ export const HomepageHeader = () => {
         </div>
       )}
     </header>
-  )
-}
+  );
+};
